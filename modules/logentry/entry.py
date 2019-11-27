@@ -90,7 +90,7 @@ class LogEntryInitalize(object):
     def get_logs(self, event=0):
         if event == 0:
             try:
-                return success("Found.", [log for log in self.current_database_to_log.find()])
+                return success("Found.", [{'id': str(log['_id']), 'event': log['logEvent'], 'log': log['logMessage']} for log in self.current_database_to_log.find()])
             except Exception as error:
                 logger.error(f"Error on trying to get all logs. {error}")
                 logger.debug(f"{traceback.print_exc()}")
