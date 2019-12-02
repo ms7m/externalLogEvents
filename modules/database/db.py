@@ -11,10 +11,6 @@ from errors.database import *
 from loguru import logger
 import traceback
 
-
-
-
-
 class SpecifiedDatabase(object):
     def __init__(self, database_name, authentication_object=None):
         self._unverified_database_name = database_name

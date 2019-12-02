@@ -13,8 +13,8 @@ from modules.logentry.entry import LogEntryInitalize
 #logger.add("logs.log")
 
 api = falcon.API()
-
-api.add_route("/logs/all/load", LoadLogs)
-api.add_route("/logs/events/all", LoadEvents)
-api.add_route("/logs/all/load/test", LoadLogsTest)
+api.add_route("/logs/all/load", LoadLogs())
+api.add_route("/logs/events/all", LoadEvents())
+api.add_route("/logs/all/load/test", LoadLogsTest())
+api.add_route("/logs/latest/one", LoadMostRecentLog())
 serve(api)
