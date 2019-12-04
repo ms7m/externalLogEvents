@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Logs</title>
+
+
+    <!--Local Scripts -->
+    <script defer src="{{ url_for('static',filename='js/js_lib/font.js') }}"></script>
+    <!-- Bulma Version 0.7.x-->
+    <script src="{{ url_for('static',filename='js/js_lib/jquery.min.js')}}"></script>
+    <script src="{{ url_for('static',filename='js/js_lib/jquery.form.js')}}"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bulma.min.css') }}" />
+    <script src="{{ url_for('static',filename='js/main.js') }}"></script>
+
+
+</head>
+
+<body onload="start()" id="backgroundColor">
+        <script>
+                const darkmode =  new Darkmode();
+                new Darkmode()
+        </script>
+    <div class="container">
+            <button onclick="darkmode.toggle()" class="button is-dark  is-pulled-right">
+                    <span class="icon">
+                    <i class="fas fa-moon"></i></i>
+                    </span>
+                    <span>dark mode</span>
+                  </button>
+                  <button onclick="darkmode.toggle()" class="button is-light is-pulled-right">
+                        <span class="icon">
+                        <i class="fas fa-sun"></i></i>
+                        </span>
+                        <span>light mode</span>
+                      </button>
+    </div>
+    <br>
+
+    <!-- END NAV -->
+        <br>
+        <section>
+        <div class="columns" id="result">
+            <div class="column is-is-full">
+                <div class="card events-card">
+                    <div class="card-table">
+                        <header class="card-header">
+                            <p class="card-header-title" id="titleColorLatestLog">
+                                Latest Log
+                            </p>
+                            <a href="#" class="card-header-icon" aria-label="more options">
+                            </a>
+                        </header>
+                        <div class="content" id="latestLogOutput">
+
+                            <progress class="progress is-small is-link" max="100" , id="deviceLoading">15%</progress>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="columns" id="result">
+                <div class="column is-is-full">
+                    <div class="card events-card">
+                        <div class="card-table">
+                            <header class="card-header">
+                                <p class="card-header-title" id="titleColorAllLog">
+                                    All Logs
+                                </p>
+                                <a href="#" class="card-header-icon" aria-label="more options">
+                                </a>
+                            </header>
+                            <br>
+                            <div class="content" id="allLogs">
+    
+                                <progress class="progress is-small is-link" max="100" , id="deviceLoading">15%</progress>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>

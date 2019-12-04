@@ -18,6 +18,6 @@ def success(custom_message, extra_provs=None):
 
 def failure(custom_message, raiseCustomError=False):
     return {
-        "status": 0,
+        "status": 1,
         "message": custom_message
     }

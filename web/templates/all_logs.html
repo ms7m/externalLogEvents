@@ -1,0 +1,23 @@
+
+
+<body>
+
+                {%for log in logs%}
+
+                <div class="container">
+                        <article class="message is-dark">
+                                <div class="message-header">
+                                      <p>{{log['event']}}</p>
+                                    </div>
+                                    <div class="message-body">
+                                        {{log['log']}}
+                                    </div>
+                            </article>
+                </div>
+
+                    <br>
+                    
+                {%endfor%}
+            </table>
+
+</body>

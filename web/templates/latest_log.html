@@ -1,0 +1,35 @@
+
+
+<body>
+
+<style>
+          
+          .recording{
+            animation: fade 2s ease-in-out infinite;
+          }
+          
+          @keyframes fade {
+            0%,100% { opacity: 0.5 }
+            50% { opacity: 1; box-shadow: 0 0 4px hsl(348, 100%, 61%); }
+          }
+</style>
+            <div class="container">
+                    <br>
+                    <button class="button is-light is-pulled-right"><strong>5s Delay</strong></button>
+                    <button class="button is-danger is-pulled-right recording"><strong>Live</strong></button>
+
+                <br>
+                <br>
+                    <article class="message is-link">
+                            <div class="message-header">
+                                  <p>{{log['event']}}</p>
+                                </div>
+                                <div class="message-body">
+                                    {{log['log']}}
+                                </div>
+                        </article>
+                <br>
+            </div>
+</body>
+
+
