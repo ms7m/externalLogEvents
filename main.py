@@ -57,5 +57,4 @@ def initalize():
 
     return api
 
-
-serve(initalize())
+api = initalize()
