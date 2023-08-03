@@ -2,7 +2,7 @@ astroid==2.3.3
 falcon==2.0.0
 isort==4.3.21
 lazy-object-proxy==1.4.3
-loguru==0.3.2
+loguru==0.5.3
 mccabe==0.6.1
 oswald==0.0.4
 pylint==2.4.4
